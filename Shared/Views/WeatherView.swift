@@ -29,10 +29,7 @@ struct WeatherView: View {
                 VStack {
                     HStack {
                         VStack(spacing: 20) {
-                            // to make the icon dynamic it needs an if statement that indicates
-                            // if the weather conditions are a specific type, display image system ""
-                            
-                            // get weather info
+             
                             Image(systemName: "cloud.fill")
                                 .font(.system(size: 50))
                             
@@ -80,8 +77,7 @@ struct WeatherView: View {
                         .bold()
                         .padding(.bottom)
                     
-                    // weather details - added the third row with 2 extra API calls
-                    
+            
                     HStack {
                         WeatherRow(logo: "thermometer", name: "Min temp", value: (weather.main.tempMin.roundDouble() + ("°")))
                         Spacer()
@@ -95,7 +91,6 @@ struct WeatherView: View {
                               WeatherRow(logo: "humidity", name: "Humidity", value: "\(weather.main.humidity.roundDouble())%")
                           }
                     
-                    // added the rest of remaining API calls here
 
                     
                     HStack {
